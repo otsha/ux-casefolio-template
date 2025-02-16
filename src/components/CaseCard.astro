@@ -1,0 +1,8 @@
+---
+const { title, url, img } = Astro.props 
+---
+
+<a class="w-full h-[320px] my-8" href={ url }>
+    <img src={ img } class="w-full h-full object-cover" />
+    <h3 class="w-full bg-[#efefef] text-[#121212] pl-2">{ title }</h3>
+</a>

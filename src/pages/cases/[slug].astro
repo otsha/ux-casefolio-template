@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content"
+import DefaultLayout from "../../layouts/DefaultLayout.astro"
+
+export async function getStaticPaths() {
+  const cases = await getCollection('cases')
+  return cases.map((caseStudy) => ({
+    params: { slug: caseStudy.slug },
+    props: {
+        caseStudy,
+    },
+  }))
+}
+
+const { caseStudy } = Astro.props
+const { title, coverImage } = caseStudy.data
+const { Content } = await caseStudy.render()
+---
+
+<DefaultLayout>
+    <img src={ coverImage } class="w-full h-[480px] object-cover" />
+    <Content />
+</DefaultLayout>

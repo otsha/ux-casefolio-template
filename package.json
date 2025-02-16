@@ -1,0 +1,20 @@
+{
+  "name": "casefolio",
+  "description": "An Astro-based portfolio template for case study portfolios.",
+  "version": "0.0.1",
+  "type": "module",
+  "author": "otsha",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.2",
+    "astro": "^4.16.10",
+    "tailwindcss": "^3.4.14"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,31 @@
+---
+const { url, text } = Astro.props
+---
+
+<nav-link data-url={url} class='text-lg md:text-2xl m-0 p-0'>
+    <!-- Local scope navlinks are rendered as buttons to introduce smooth scroll ability -->
+    {url.startsWith('/') 
+        ? <button>{ text }</button>
+        : <a href={ url }>{ text }</a>
+    }
+</nav-link>
+
+<script>
+    class NavLink extends HTMLElement {
+        connectedCallback() {
+            const url = this.dataset.url || ''
+            const btn = this.querySelector('button')
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    if (window.location.pathname === '/' && url.split('#')[0] === '/') {
+                        document.getElementById(url.split('#')[1])?.scrollIntoView({ behavior: 'smooth' })
+                    } else {
+                        window.location.replace(url)
+                    }
+                })
+            }
+        }
+    }
+    
+    customElements.define('nav-link', NavLink)
+</script>

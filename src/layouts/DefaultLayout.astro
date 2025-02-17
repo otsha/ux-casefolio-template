@@ -3,13 +3,15 @@ import Nav from '../components/Nav.astro'
 import Footer from '../components/Footer.astro'
 
 import '../global.css'
+
+const { frontmatter } = Astro.props
 ---
 
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>{ frontmatter && `${frontmatter.title} |` } { import.meta.env.SITE_NAME }</title>
     <link rel="favicon" type="image/png" href="icon.png" />
 </head>
 

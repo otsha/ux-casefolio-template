@@ -2,14 +2,18 @@
 import NavLink from "./NavLink.astro"
 ---
 
-<nav class="fixed top-0 bg-[#121212] w-full p-4 flex flex-col justify-start items-center gap-4 md:flex-row md:justify-between md:items-baseline md:gap-0 md:px-8">
+<nav class="w-full p-4 flex flex-col gap-8 justify-start items-center md:flex-row md:justify-between md:items-baseline md:gap-0 md:px-8 md:fixed md:bg-[#121212]">
     <button id="titlebtn"><h1 class="text-4xl m-0 p-0">Your Portfolio</h1></button>
-    <div class="flex flex-col justify-center items-center gap-2 md:flex-row md:justify-evenly md:items-baseline md:gap-8">
+    <div class="flex flex-row justify-evenly items-baseline gap-8 flex-wrap md:flex-nowrap">
         <NavLink text="About" url="/#about" />
         <NavLink text="Cases" url="/#cases" />
         <NavLink text="Link" url="https://example.com" />
     </div>
 </nav>
+
+<button id="scrollToTop" class="md:hidden fixed bottom-8 right-8 w-[48px] h-[48px] pb-[4px] bg-[#121212] text-[#efefef] rounded-full shadow-lg text-xl hover:bg-[#efefef] hover:text-[#121212] outline outline-white/20">
+    &uarr;
+</button>
 
 <script>
     const titleBtn = document.getElementById('titlebtn')
@@ -19,5 +23,10 @@ import NavLink from "./NavLink.astro"
         } else {
             window.location.replace('/')
         }
+    })
+
+    const bttButton = document.getElementById('scrollToTop')
+    bttButton?.addEventListener('click', () => {
+        document.getElementById('top')?.scrollIntoView({ behavior: 'smooth' })
     })
 </script>

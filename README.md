@@ -19,7 +19,7 @@ npm install
 4. Create a new file named `.env` and add environment variables for the site's title and copyright information
 
 ```env
-SITE_NAME=My Cool Portfolio
+SITE_TITLE=My Cool Portfolio
 COPYRIGHT_NAME=My Name
 COPYRIGHT_YEAR=2025
 ```

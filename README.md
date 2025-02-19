@@ -1,14 +1,19 @@
 # UX Casefolio Template
 
-A responsive template for case study heavy portfolios, built with [Astro](https://astro.build) and [TailwindCSS](https://tailwindcss.com). I guess you could also use it as a blog with some tweaks! 😅 
+A responsive (but barebones) starting template for case study heavy portfolios, built with [Astro](https://astro.build) and [TailwindCSS](https://tailwindcss.com). 
+
+I guess you could also use it as a blog with some tweaks! 😅 
+
+- [Template Demo](https://ux-casefolio-template-demo.netlify.app/) 🚀
+- [An actual portfolio extended from this](https://otsha.net) ✨
 
 ## Running Locally
 
 0. You should have Node.js & npm installed.
 
-1. (Optional) fork this repository if you'd like to use git for version control.
+1. Select "Use this template" to create yourself a copy of this repository
 
-2. Clone or download the repository and navigate to its root
+2. Clone the newly created repository and navigate to its root
 
 3. Install the required dependencies
 
@@ -88,7 +93,7 @@ Markdown files can also utilize HTML and Tailwind classes if you need further cu
 
 You can add external links to the navigation bar by updating `src/components/Nav.astro`. There's already an example of an external link. You can simply use the `Navlink` component.
 
-### Styling
+### Customization
 
 The application is mostly using [TailwindCSS](https://tailwindcss.com) to style each component individually. Additionally, some global styling (font, root element styling, text formatting) is provided in `src/global.css`. Feel free to customize in your preferred way. 
 

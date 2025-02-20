@@ -45,7 +45,7 @@ You can edit the site title, as well as the copyright information by updating th
 
 Place these in the `public/` directory at the root of the repository.
 
-- The `favicon` should be a `png` file, and it's recommended to keep small in size. If you'd like to use another image type / filename, you can edit the site's `<head>` in `src/layouts/DefaultLayout.astro`.
+- The `icon` should be a `png` file, and it's recommended to keep small in size. If you'd like to use another image type / filename, you can edit the site's `<head>` in `src/layouts/DefaultLayout.astro`.
 - The `hero` image should be a `jpg` file. It is displayed on the index page and takes up the entire screen by default. You can change the file path in `src/components/Hero.astro` if you'd like to use, say, `webp` (which I would generally recommend due to smaller file size).
 - The `profile` image should be a `jpg` file as well. It is displayed on the index page in the "About" section. You can change the file path in `src/components/AboutSection.astro`.
 

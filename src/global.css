@@ -37,6 +37,11 @@ p {
     margin-bottom: 1rem;
 }
 
+a {
+    text-decoration: none;
+    color: #1f76ff;
+}
+
 ul {
     list-style: disc;
     margin-left: 1rem;

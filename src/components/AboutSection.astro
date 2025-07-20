@@ -1,13 +1,10 @@
-<div id="about" class="my-8 w-5/6 h-[100vh] text-left flex flex-col justify-start items-center lg:w-4/6 lg:flex-row lg:justify-evenly lg:gap-8 lg:items-center xl:w-3/6">
-    <img src="profile.jpg" class="w-[320px] h-[320px] rounded-full"/>
+---
+import { Content, frontmatter } from '../content/about.md'
+---
+
+<section id="about" class="my-8 w-5/6 h-[100vh] text-left flex flex-col justify-start items-center lg:w-4/6 lg:flex-row lg:justify-evenly lg:gap-8 lg:items-center xl:w-3/6">
+    <img src={ frontmatter.profilePhoto } class="w-[320px] h-[320px] rounded-full" alt="Profile photo" />
     <div>
-        <h2 class="text-center lg:text-left">About</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam consequuntur fugiat ab id aliquid voluptas, consectetur, dolore numquam esse ipsa iure sit amet, harum ut sapiente provident architecto suscipit fugit.</p>
-        <ul>
-            <li>Lorem ipsum</li>
-            <li>Dolor sit amet</li>
-            <li>Consectetur adipisicing elit</li>
-        </ul>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus vitae harum reiciendis perferendis. Blanditiis, quasi dicta suscipit dolorem eligendi rem. Ducimus voluptatibus voluptatum quis, fuga molestias quaerat ipsum voluptas enim.</p>
+        <Content />
     </div>
-</div>
+</section>
